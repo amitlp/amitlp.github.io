@@ -486,6 +486,25 @@
                         <span class="badge">Privacy-First</span>
                     </div>
                 </div>
+
+                <div class="project-card">
+                    <div class="project-title">Bank Statement OCR</div>
+                    <div>
+                        <a href="https://github.com/vidyalai-in/bank-ocr" target="_blank" class="project-link">
+                            github.com/vidyalai-in/bank-ocr
+                        </a>
+                    </div>
+                    <div class="project-description">
+                        A fully local pipeline that converts bank statements (PDF or image, multi-page, any bank) into validated, structured JSON — no statement data ever leaves the machine. Documents are parsed with a choice of pluggable parsers — Docling (with RapidOCR/PaddleOCR for scanned pages), MinerU, or Marker/Surya — into clean Markdown tables, then transactions and account fields are extracted deterministically for accuracy and speed. A local LLM (Qwen3-4B via Ollama) fills in the account holder name and acts as a fallback for non-tabular statements, and can be disabled entirely for fully deterministic runs. Running-balance math is self-validated, with discrepancies flagged rather than silently corrected. Designed to run comfortably under 8 GB of VRAM by keeping the parsing and LLM stages sequential.
+                    </div>
+                    <div>
+                        <span class="badge">Python</span>
+                        <span class="badge">OCR</span>
+                        <span class="badge">Docling</span>
+                        <span class="badge">Local LLM</span>
+                        <span class="badge">Privacy-First</span>
+                    </div>
+                </div>
             </section>
 
             <section>
