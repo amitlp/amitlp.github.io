@@ -227,18 +227,114 @@
         }
 
         @media print {
+            @page {
+                size: A4;
+                margin: 12mm 12mm;
+            }
+
+            * {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
             body {
                 background: white;
                 padding: 0;
+                font-size: 8.4pt;
+                line-height: 1.22;
             }
 
             .container {
                 box-shadow: none;
                 border-radius: 0;
+                max-width: 100%;
+            }
+
+            header {
+                padding: 10px 22px;
+            }
+
+            header h1 {
+                font-size: 1.7em;
+                margin-bottom: 3px;
+            }
+
+            .contact-info {
+                margin-top: 5px;
+                gap: 3px 14px;
+                font-size: 0.82em;
+            }
+
+            .content {
+                padding: 14px 22px;
+            }
+
+            section {
+                margin-bottom: 9px;
+            }
+
+            h2 {
+                font-size: 1.18em;
+                margin-bottom: 7px;
+                padding-bottom: 4px;
+                border-bottom-width: 2px;
+            }
+
+            h3 {
+                font-size: 1.02em;
+                margin-top: 8px;
+                margin-bottom: 3px;
+            }
+
+            p {
+                margin-bottom: 3px;
+            }
+
+            ul {
+                margin-top: 3px;
+                margin-left: 15px;
+            }
+
+            li {
+                margin-bottom: 1.5px;
+            }
+
+            ul ul {
+                margin-top: 1.5px;
+            }
+
+            .company {
+                margin-bottom: 3px;
             }
 
             .project-card {
+                padding: 9px 12px;
+                margin-bottom: 8px;
+            }
+
+            .project-description {
+                margin-top: 4px;
+                line-height: 1.32;
+            }
+
+            .badge {
+                padding: 1px 7px;
+                font-size: 0.8em;
+                margin-top: 3px;
+            }
+
+            .education-item {
+                margin-bottom: 8px;
+            }
+
+            .project-card,
+            .education-item,
+            .job-header {
                 page-break-inside: avoid;
+            }
+
+            h2, h3 {
+                page-break-after: avoid;
             }
         }
     </style>
