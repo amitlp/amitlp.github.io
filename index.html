@@ -229,7 +229,7 @@
         @media print {
             @page {
                 size: A4;
-                margin: 12mm 12mm;
+                margin: 10mm 10mm;
             }
 
             * {
@@ -241,7 +241,7 @@
                 background: white;
                 padding: 0;
                 font-size: 8.4pt;
-                line-height: 1.22;
+                line-height: 1.18;
             }
 
             .container {
@@ -266,11 +266,11 @@
             }
 
             .content {
-                padding: 14px 22px;
+                padding: 12px 18px;
             }
 
             section {
-                margin-bottom: 9px;
+                margin-bottom: 8px;
             }
 
             h2 {
@@ -369,7 +369,15 @@
                 <div>
                     <h3>Few endeavours that I am involved in currently</h3>
                     <ul>
-                        <li><strong>Multi-modal AI workflow platform:</strong> Building a platform to accelerate AI and emerging technology adoption in enterprises. The platform takes inspiration from ComfyUI's node-based workflow approach, making in-house complex AI capabilities accessible for enterprises</li>
+                        <li><strong>Multi-modal AI workflow platform:</strong> Building a platform to accelerate AI and emerging technology adoption in enterprises. The platform takes inspiration from ComfyUI's node-based workflow approach, making in-house complex AI capabilities accessible for enterprises. Some representative use cases built on the platform:
+                            <ul>
+                                <li>Factory floor worker tracking and uniform compliance (<a href="https://amitlp.github.io/assets/factory.mp4" target="_blank">sample video</a>)</li>
+                                <li>Bank statements parsing</li>
+                                <li>ID card generation from image</li>
+                                <li>Meeting notes and action items generation from meeting video</li>
+                                <li>Resume to jobs and vice versa matcher</li>
+                            </ul>
+                        </li>
                         <li><strong>Onprem WhatsApp Business Messaging Platform:</strong> Building an on-premises platform to support large-scale campaigns, WA flows based interactions, and AI-enabled chatbot automation, with a strong focus on scalability, security, reliability, and observability.</li>
 			            <li><strong><a href="https://appoint-e.com/" target="_blank">Appoint-e</a>:</strong> Co-founded a SaaS platform for complete salon business management that streamlines operations and enhances customer experience through automation. It provides comprehensive features like appointment scheduling, staff &amp; payout management, customer engagement and detailed reporting.</li>
                     </ul>
@@ -591,12 +599,12 @@
                         </a>
                     </div>
                     <div class="project-description">
-                        A fully local pipeline that converts bank statements (PDF or image, multi-page, any bank) into validated, structured JSON — no statement data ever leaves the machine. Documents are parsed with a choice of four pluggable parsers — Docling (with RapidOCR/PaddleOCR for scanned pages), MinerU, Marker/Surya, or GLM-OCR (a small MIT-licensed VLM with the highest recall) — into clean Markdown tables, then transactions and account fields are extracted deterministically for accuracy and speed. A local LLM (Qwen3-4B via Ollama) fills in the account holder name and acts as a fallback for non-tabular statements, and can be disabled entirely for fully deterministic runs. Running-balance math is self-validated, with discrepancies flagged rather than silently corrected. Designed to run comfortably under 8 GB of VRAM by keeping the parsing and LLM stages sequential.
+                        A fully local pipeline that converts bank statements (PDF or image, multi-page, any bank) into validated, structured JSON — no statement data ever leaves the machine. Ten pluggable parsers sit behind a single protocol in three families: native-text CPU parsers (pdfplumber, Camelot lattice/stream, PyMuPDF, PyMuPDF-layout, Tika) that need no GPU and no model download and finish in under 2 seconds per file — Camelot reaches 0.996 F1 on fully ruled grids and Tika leads every borderless layout measured; Docling, the default, which adds RapidOCR/PaddleOCR to read scans; and opt-in GPU models (MinerU, Marker/Surya, and GLM-OCR, a small MIT-licensed VLM with the highest recall at 99.5%). A per-parser Markdown dialect layer normalises their output so deterministic extraction of transactions and account fields holds across all of them. A local LLM (Qwen3-4B via Ollama) fills in the account holder name and acts as a fallback for non-tabular statements, and can be disabled entirely for fully deterministic runs. Running-balance math is self-validated, with discrepancies flagged rather than silently corrected. Designed to run comfortably under 8 GB of VRAM by keeping the parsing and LLM stages sequential.
                     </div>
                     <div>
                         <span class="badge">Python</span>
                         <span class="badge">OCR</span>
-                        <span class="badge">Docling</span>
+                        <span class="badge">10 Pluggable Parsers</span>
                         <span class="badge">Local LLM</span>
                         <span class="badge">Privacy-First</span>
                     </div>
