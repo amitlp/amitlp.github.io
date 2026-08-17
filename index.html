@@ -226,6 +226,10 @@
             }
         }
 
+        .print-only {
+            display: none;
+        }
+
         @media print {
             @page {
                 size: A4;
@@ -336,6 +340,12 @@
             h2, h3 {
                 page-break-after: avoid;
             }
+
+            /* PDF viewers cannot honour target="_blank"; tell the reader how to
+               open the link without navigating away from the resume. */
+            .print-only {
+                display: inline;
+            }
         }
     </style>
 </head>
@@ -371,7 +381,7 @@
                     <ul>
                         <li><strong>Multi-modal AI workflow platform:</strong> Building a platform to accelerate AI and emerging technology adoption in enterprises. The platform takes inspiration from ComfyUI's node-based workflow approach, making in-house complex AI capabilities accessible for enterprises. Some representative use cases built on the platform:
                             <ul>
-                                <li>Factory floor worker tracking and uniform compliance (<a href="https://amitlp.github.io/assets/factory.mp4" target="_blank">sample video</a>)</li>
+                                <li>Factory floor worker tracking and uniform compliance (<a href="https://amitlp.github.io/assets/factory.mp4" target="_blank">sample video</a><span class="print-only"> — Ctrl/Cmd+click to open in a new tab</span>)</li>
                                 <li>Bank statements parsing</li>
                                 <li>ID card generation from image</li>
                                 <li>Meeting notes and action items generation from meeting video</li>
