@@ -92,6 +92,12 @@
             font-weight: 600;
         }
 
+        h3 a {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(118, 75, 162, 0.3);
+        }
+
         .job-header {
             display: flex;
             justify-content: space-between;
@@ -244,7 +250,7 @@
             body {
                 background: white;
                 padding: 0;
-                font-size: 8.4pt;
+                font-size: 8.3pt;
                 line-height: 1.18;
             }
 
@@ -264,6 +270,7 @@
             }
 
             .contact-info {
+                flex-direction: row;
                 margin-top: 5px;
                 gap: 3px 14px;
                 font-size: 0.82em;
@@ -354,11 +361,9 @@
         <header>
             <h1>Amit Padalkar</h1>
             <div class="contact-info">
-                <span>📍 A601, Regent Park, Near Sky Gym, Baner, Pune – 411045, Maharashtra, India</span>
                 <span>📧 <a href="mailto:amitlp@gmail.com">amitlp@gmail.com</a></span>
                 <span>💼 <a href="https://www.linkedin.com/in/amitlp/" target="_blank">linkedin.com/in/amitlp</a></span>
                 <span>🐙 <a href="https://github.com/orgs/vidyalai-in/repositories" target="_blank">github.com/vidyalai-in</a></span>
-                <span>📱 +91-9833435125</span>
             </div>
         </header>
 
@@ -377,21 +382,26 @@
                 <h2>Work Experience</h2>
 
                 <div>
-                    <h3>Few endeavours that I am involved in currently</h3>
+                    <h3><a href="https://gluegun.dev/" target="_blank">Gluegun</a>, Pune, India</h3>
+                    <div class="job-header">
+                        <span class="job-title">Co-founder &amp; CTO</span>
+                        <span class="job-date">[Apr 2026 – Present]</span>
+                    </div>
+                    <p>Gluegun is a private AI features platform that lets product and engineering teams ship AI features in as little as 30 minutes, without building an AI team. All data stays on the customer's own infrastructure.</p>
                     <ul>
-                        <li><strong>Multi-modal AI workflow platform:</strong> Building a platform to accelerate AI and emerging technology adoption in enterprises. The platform takes inspiration from ComfyUI's node-based workflow approach, making in-house complex AI capabilities accessible for enterprises. Some representative use cases built on the platform:
-                            <ul>
-                                <li>Factory floor worker tracking and uniform compliance (<a href="https://amitlp.github.io/assets/factory.mp4" target="_blank">sample video</a><span class="print-only"> — Ctrl/Cmd+click to open in a new tab</span>)</li>
-                                <li>Cargo loading/unloading counter &mdash; counts multiple cargo types moving in or out of a truck, handling single or multiple units per trip (<a href="https://amitlp.github.io/assets/multiCargo.mp4" target="_blank">sample video</a><span class="print-only"> &mdash; Ctrl/Cmd+click to open in a new tab</span>)</li>
-                                <li>Bank statements parsing</li>
-                                <li>ID card generation from image</li>
-                                <li>Meeting notes and action items generation from meeting video</li>
-                                <li>Resume to jobs and vice versa matcher</li>
-                            </ul>
-                        </li>
-                        <li><strong>Onprem WhatsApp Business Messaging Platform:</strong> Building an on-premises platform to support large-scale campaigns, WA flows based interactions, and AI-enabled chatbot automation, with a strong focus on scalability, security, reliability, and observability.</li>
-			            <li><strong><a href="https://appoint-e.com/" target="_blank">Appoint-e</a>:</strong> Co-founded a SaaS platform for complete salon business management that streamlines operations and enhances customer experience through automation. It provides comprehensive features like appointment scheduling, staff &amp; payout management, customer engagement and detailed reporting.</li>
+                        <li><strong>Composable AI tasks:</strong> 60+ customisable tasks across audio, speech, vision, OCR and text, built on open models. Tasks chain into pipelines with conditional branching and parallel execution, and each step runs its own specialised model instead of one general-purpose LLM.</li>
+                        <li><strong>Sovereign deployment:</strong> Runs on-prem or in the customer's VPC, including offline and air-gapped environments. Deploys with one command and scales from a single container to an auto-scaling cluster, with built-in observability, health checks and retries.</li>
+                        <li><strong>Use cases:</strong> Representative examples across 12+ industries include KYC document verification, insurance claims processing, clinical SOAP notes, contract clause extraction, and visual quality inspection and PPE monitoring on factory floors. Many more can be built by composing the same tasks.</li>
                     </ul>
+                </div>
+
+                <div>
+                    <h3><a href="https://appoint-e.com/" target="_blank">Appoint-e</a>, Mumbai, India</h3>
+                    <div class="job-header">
+                        <span class="job-title">Co-founder &amp; CTO</span>
+                        <span class="job-date">[Jun 2025 – Mar 2026]</span>
+                    </div>
+                    <p>Appoint-e is a SaaS platform for complete salon business management that streamlines operations and improves customer experience through automation. It offers 24/7 online booking with automated reminders to reduce no-shows, staff scheduling with automated commission and payout calculation, customer and membership management, and business analytics for multi-branch salons.</p>
                 </div>
 
                 <div>
@@ -559,7 +569,7 @@
             </section>
 
             <section>
-                <h2>Open Source Projects</h2>
+                <h2>Projects</h2>
 
                 <div class="project-card">
                     <div class="project-title">Claude Agent SDK for Java</div>
@@ -576,6 +586,19 @@
                         <span class="badge">AI SDK</span>
                         <span class="badge">Claude Integration</span>
                         <span class="badge">MCP Servers</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">Onprem WhatsApp Business Messaging Platform</div>
+                    <div class="project-description">
+                        An on-premises platform for WhatsApp Business messaging that supports large-scale campaigns, WhatsApp Flows based interactions, and AI-enabled chatbot automation. Built with a strong focus on scalability, security, reliability, and observability.
+                    </div>
+                    <div>
+                        <span class="badge">WhatsApp Business</span>
+                        <span class="badge">On-Prem</span>
+                        <span class="badge">AI Chatbots</span>
+                        <span class="badge">Observability</span>
                     </div>
                 </div>
 
